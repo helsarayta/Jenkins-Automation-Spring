@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: test-springboot-k8s
-          image: heydie/spring-jenkins
+          image: heydie/jenkins-automation
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8085
