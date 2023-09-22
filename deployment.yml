@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-deployment
+  name: springboot-dep
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: test-springboot-k8s
-          image: heydie/jenkins-automation
+          image: heydie/jenkins-automation:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8085
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot-service
+  name: springboot-svc
 spec:
   selector:
     name: test-springboot-k8s

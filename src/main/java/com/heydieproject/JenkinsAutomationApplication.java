@@ -19,7 +19,7 @@ public class JenkinsAutomationApplication {
     @GetMapping
     public String welcomeMessage() {
         log.info("log jenkins automation !!!!");
-        return "Welcome Jenkins Automation";
+        return "Welcome Jenkins Automation NEW";
     }
 
 }
